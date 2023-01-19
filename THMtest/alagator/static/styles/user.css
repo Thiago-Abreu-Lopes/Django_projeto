@@ -1,0 +1,118 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "Segoe UI";
+}
+img{
+	float: left;
+	font-size: 0;
+}
+body{
+	background-color: #62929E;
+}
+a{
+	text-decoration: none;
+}
+
+
+/*SUPERIOR*/
+.upper_body{
+	margin-top: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.img_logo{
+	height: 225px;
+	width: auto;
+	border: 2px solid #62929E;
+	border-radius: 15px 0px 0px 15px;
+	background-color: #FDFDFF;
+	margin-bottom: 0px;
+	padding:20px;
+	color: #546A7B;
+}
+
+.main_right{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center; 
+	height: 100%;
+	background-color: #FDFDFF;
+	border: 2px solid #62929E;
+	border-radius: 0px 15px 15px 0px;
+	padding: 20px;
+	padding-top:58px;
+	padding-bottom:59px;
+}
+
+.ola_tag{
+	font-weight: bold;
+	font-size: 30px;
+
+}
+.registro_tag{
+	margin-bottom: 5px;
+}
+.registro_endereco{
+	background-color: #C6C5B9;
+	padding: 10px;
+	padding-left: 31px;
+	padding-right: 31px;
+	border-radius: 5px 5px  0px 0px;
+	color: #393D3F;
+}
+.registro_endereco:hover{
+	background-color: #94928A;
+	color: #FDFDFF;
+}
+.registro_alagamento{
+	background-color: #62929E;
+	padding: 10px;
+	border-radius: 0px 0px  5px 5px;
+	color: #393D3F;
+
+}
+.registro_alagamento:hover{
+	background-color: #3C5961;
+	color: #FDFDFF;
+}
+/*INFERIOR*/
+
+.lower_body{
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+ul{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items:  center;
+	height: 100%;
+	width: 100%;
+}
+
+li{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items:  center;
+	list-style: none;
+	padding-bottom: 20px;
+	height: 100%;
+	width: 100%;
+	border: 2px solid #62929E;
+	border-radius: 15px;
+	background-color: #FDFDFF;
+	color: #393D3F;
+}
+.int_text{
+	font-size: 20px;
+	font-weight: bold;
+}
