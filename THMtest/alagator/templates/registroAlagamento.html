@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang = "pt-br">
+<head>
+	<link rel="stylesheet" href="../static/styles/registroAlagamento.css"
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Alagator - Serviço de Registro de Alagamentos</title>
+</head>
+<body>
+	<div class ="body">
+		<div class="main_left">
+			<h1 class="titulo">Registrar Alagamento</h1>
+		</div>
+		<div class="main_right">
+			<form class="form_main" method="POST">
+				<input class="text_input" id="cep" type="text" name="cep" placeholder="CEP">
+				<input class="text_input" id="logradouro"type="text" name="logradouro" placeholder="Logradouro">
+				<input class="text_input" id="bairro" type="text" name="bairro" placeholder="Bairro">
+				<input class="text_input" id="cidade" type="text" name="cidade" placeholder="Cidade">
+				<input class="text_input" id="uf" type="text" name="uf" placeholder="UF">
+				<select>
+					<option selected="selected">Selecionar Intensidade:</option>
+    				<option value="1">Leve</option>
+   					<option value="2">Moderado</option>
+   					<option value="3">Grave</option>
+				</select>
+				<select>
+					<option selected="selected">Selecionar Classificação:</option>
+    				<option value="1">Localizado</option>
+   					<option value="2">Intrasitável</option>
+				</select>
+				<input type="file" accept="image/*,.pdf" name="imagem1"/>
+				<input type="file" accept="image/*,.pdf" name="imagem2"/>
+				<button class="button_input" type="submit">Registrar</button>
+			</form>
+		</div>
+		
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+	<script>
+			$("#cep").blur(function(){
+				var cep = this.value.replace(/[^0-9]/, "");
+				if(cep.length != 8){
+					return false;
+				}
+				var url = "https://viacep.com.br/ws/"+cep+"/json/";
+				
+				$.getJSON(url, function(dadosRetorno){
+					try{
+						$("#logradouro").val(dadosRetorno.logradouro);
+						$("#bairro").val(dadosRetorno.bairro);
+						$("#cidade").val(dadosRetorno.localidade);
+						$("#uf").val(dadosRetorno.uf);
+					}catch(ex){}
+				});
+			});
+		</script>
+</body>
+</html>

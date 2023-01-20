@@ -15,15 +15,21 @@ a{
 }
 
 
-/*SUPERIOR*/
+/*SUPERIOR USER*/
 .upper_body{
-	margin-top: 15px;
+	width: 100%;
+	position: fixed;
+	top:0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background-color: #62929E;
+	border-radius: 5px;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 
-.img_logo{
+.img_logo_user{
 	height: 225px;
 	width: auto;
 	border: 2px solid #62929E;
@@ -34,7 +40,7 @@ a{
 	color: #546A7B;
 }
 
-.main_right{
+.main_right_user{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -44,8 +50,8 @@ a{
 	border: 2px solid #62929E;
 	border-radius: 0px 15px 15px 0px;
 	padding: 20px;
-	padding-top:58px;
-	padding-bottom:59px;
+	padding-top:74px;
+	padding-bottom:74px;
 }
 
 .ola_tag{
@@ -54,35 +60,23 @@ a{
 
 }
 .registro_tag{
-	margin-bottom: 5px;
-}
-.registro_endereco{
-	background-color: #C6C5B9;
-	padding: 10px;
-	padding-left: 31px;
-	padding-right: 31px;
-	border-radius: 5px 5px  0px 0px;
-	color: #393D3F;
-}
-.registro_endereco:hover{
-	background-color: #94928A;
-	color: #FDFDFF;
+	margin-top: 5px;
 }
 .registro_alagamento{
+	margin-top: 10px;
 	background-color: #62929E;
 	padding: 10px;
-	border-radius: 0px 0px  5px 5px;
-	color: #393D3F;
+	border-radius:5px;
+	color: #FDFDFF;
 
 }
 .registro_alagamento:hover{
 	background-color: #3C5961;
-	color: #FDFDFF;
 }
 /*INFERIOR*/
 
 .lower_body{
-	margin-top: 20px;
+	margin-top: 300px;
 	display: flex;
 	justify-content: center;
 	align-items: center;

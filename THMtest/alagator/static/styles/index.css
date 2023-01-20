@@ -14,10 +14,16 @@ body{
 
 /*SUPERIOR*/
 .upper_body{
-	margin-top: 15px;
+	width: 100%;
+	position: fixed;
+	top:0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background-color: #62929E;
+	border-radius: 5px;
+	padding-top: 17px;
+	padding-bottom: 17px;
 }
 
 .img_logo{
@@ -63,10 +69,57 @@ input{
 	text-decoration: none;
 	color:#62929E;
 }
+
+/*User Style*/
+
+.img_logo_user{
+	height: 225px;
+	width: auto;
+	border: 2px solid #62929E;
+	border-radius: 15px 0px 0px 15px;
+	background-color: #FDFDFF;
+	margin-bottom: 0px;
+	padding:20px;
+	color: #546A7B;
+}
+
+.main_right_user{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center; 
+	height: 100%;
+	background-color: #FDFDFF;
+	border: 2px solid #62929E;
+	border-radius: 0px 15px 15px 0px;
+	padding: 20px;
+	padding-top:74px;
+	padding-bottom:74px;
+}
+
+.ola_tag{
+	font-weight: bold;
+	font-size: 30px;
+
+}
+.registro_tag{
+	margin-top: 5px;
+}
+.registro_alagamento{
+	margin-top: 10px;
+	background-color: #62929E;
+	padding: 10px;
+	border-radius:5px;
+	color: #FDFDFF;
+
+}
+.registro_alagamento:hover{
+	background-color: #3C5961;
+}
 /*INFERIOR*/
 
 .lower_body{
-	margin-top: 20px;
+	margin-top: 300px;
 	display: flex;
 	justify-content: center;
 	align-items: center;

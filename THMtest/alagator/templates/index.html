@@ -8,34 +8,40 @@
 </head>
 <body>
 	<div class ="upper_body">
+		{% if valido %}
+		<div class="main_left_user">
+			<img class="img_logo_user" src="../static/imgs/logo.png" alt="logo">
+		</div>
+		<div class="main_right_user">
+			<span class="ola_tag">Olá,{{user.username}}!</span>
+			<span class="registro_tag">Total de Registros: {{ user.alagamento_set.count }}</span>
+			<a class="registro_alagamento" href="registro_alagamento">Registrar de Alagamento</a>
+		</div>
+		{% else %}
 		<div class="main_left">
 			<img class="img_logo" src="../static/imgs/logo.png" alt="logo">
 		</div>
 		<div class="main_right">
 			<form class="form_main" method="POST">
-				<input class="text_input" type="text" name="username" placeholder="Username">
-				<input class="text_input" type="text" name="email" placeholder="Email">
-
+				<!--<input class="text_input" type="text" name="username" placeholder="Username">
+				<input class="text_input" type="text" name="email" placeholder="Email">-->
+				{% csrf_token %}
+        		{{ form.username }}
+        		{{ form.email }}
 				<button class="button_input" type="submit">Login</button>
 				<a class="tag_cadastro" href="/registrar">Cadastre-se</a>
 			</form>
 		</div>
-		
+		{% endif %}
 	</div>
 	<div class="lower_body">
 		<ul>
+			{% for ocorrencia in alagamento %}
 			<li>
-				<span class="int_text">Intesidade1/Categoria</span>
-				<span class="loc_tex">Localização</span>
+				<span class="int_text">{{ocorrencia.intensidade}}/{{ocorrencia.classificacao}}</span>
+				<span class="loc_tex">{{str(ocorrencia.local)}}</span>
 			</li>
-			<li>
-				<span class="int_text">Intesidade2/Categoria</span>
-				<span class="loc_tex">Localização</span>
-			</li>
-			<li>
-				<span class="int_text">Intesidade3/Categoria</span>
-				<span class="loc_tex">Localização</span>
-			</li>
+			{% endfor %}
 		</ul>
 	</div>
 </body>
